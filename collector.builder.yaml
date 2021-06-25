@@ -1,0 +1,21 @@
+dist:
+  module: github.com/Appdynamics/appdynamics-ot-collector
+  otelcol_version: 0.29.0
+  name: appdynamics-ot-collector
+  version: 0.0.1
+  go: /usr/local/go/bin/go
+  output_path: .
+
+extensions:
+  - gomod: github.com/open-telemetry/opentelemetry-collector-contrib/extension/oauth2clientauthextension v0.29.0
+
+processors:
+  - gomod: github.com/open-telemetry/opentelemetry-collector-contrib/processor/resourcedetectionprocessor v0.29.0
+
+receivers:
+  - gomod: github.com/open-telemetry/opentelemetry-collector-contrib/receiver/prometheusexecreceiver v0.29.0
+
+replaces:
+    # replace opentelemetry-colelctor-contrib/extension/oauth2clientauth with cisco fork
+  - github.com/open-telemetry/opentelemetry-collector-contrib/extension/oauth2clientauthextension => github.com/cisco/opentelemetry-collector-contrib/extension/oauth2clientauthextension oauth2
+
