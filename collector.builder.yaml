@@ -7,15 +7,11 @@ dist:
   output_path: .
 
 extensions:
-  - gomod: github.com/open-telemetry/opentelemetry-collector-contrib/extension/oauth2clientauthextension v0.29.0
+  - gomod: github.com/open-telemetry/opentelemetry-collector-contrib/extension/oauth2clientauthextension v0.0.0-20210628232716-52af6aae8846
 
 processors:
-  - gomod: github.com/open-telemetry/opentelemetry-collector-contrib/processor/resourcedetectionprocessor v0.29.0
 
 receivers:
-  - gomod: github.com/open-telemetry/opentelemetry-collector-contrib/receiver/prometheusexecreceiver v0.29.0
 
 replaces:
-    # replace opentelemetry-colelctor-contrib/extension/oauth2clientauth with cisco fork
-  - github.com/open-telemetry/opentelemetry-collector-contrib/extension/oauth2clientauthextension => github.com/cisco/opentelemetry-collector-contrib/extension/oauth2clientauthextension oauth2
 
