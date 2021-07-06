@@ -5,7 +5,7 @@ Collector contains
 -------------------
 - Core v0.29.0
 - Extensions
-  - OAuth2 Auth extension
+  - OAuth2 Auth extension for clients.
 - Processors
   - Resource Detection 
 
